@@ -61,7 +61,7 @@ func quotation(w http.ResponseWriter, r *http.Request) {
 }
 
 func findQuotation() DollarQuotation {
-	ctx, cancel := context.WithTimeout(context.Background(), 3000*time.Millisecond)
+	ctx, cancel := context.WithTimeout(context.Background(), 200*time.Millisecond)
 	defer cancel()
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
